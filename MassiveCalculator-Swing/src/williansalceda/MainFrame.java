@@ -16,6 +16,7 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
+        FrameCalc.setVisible(false);
     }
 
     /**
@@ -30,6 +31,7 @@ public class MainFrame extends javax.swing.JFrame {
         lblInsertSomeValue = new javax.swing.JLabel();
         txtNumberInserted = new javax.swing.JSpinner();
         btnCalculate = new javax.swing.JButton();
+        FrameCalc = new javax.swing.JPanel();
         lblDivision = new javax.swing.JLabel();
         lblRemainder = new javax.swing.JLabel();
         lblSquareRoot = new javax.swing.JLabel();
@@ -103,35 +105,75 @@ public class MainFrame extends javax.swing.JFrame {
         txtAbsolutValue.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txtAbsolutValue.setText("0");
 
+        javax.swing.GroupLayout FrameCalcLayout = new javax.swing.GroupLayout(FrameCalc);
+        FrameCalc.setLayout(FrameCalcLayout);
+        FrameCalcLayout.setHorizontalGroup(
+            FrameCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 360, Short.MAX_VALUE)
+            .addGroup(FrameCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(FrameCalcLayout.createSequentialGroup()
+                    .addGap(54, 54, 54)
+                    .addGroup(FrameCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(lblCubicRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblAbsoluteValue, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(FrameCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblRemainder, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblSquareRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(18, 18, 18)
+                    .addGroup(FrameCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtRemainder, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtSquareRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtCubicRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtAbsolutValue, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(88, Short.MAX_VALUE)))
+        );
+        FrameCalcLayout.setVerticalGroup(
+            FrameCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(FrameCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(FrameCalcLayout.createSequentialGroup()
+                    .addGap(19, 19, 19)
+                    .addGroup(FrameCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(FrameCalcLayout.createSequentialGroup()
+                            .addComponent(lblDivision)
+                            .addGap(18, 18, 18)
+                            .addComponent(lblRemainder)
+                            .addGap(18, 18, 18)
+                            .addComponent(lblSquareRoot)
+                            .addGap(18, 18, 18)
+                            .addComponent(lblCubicRoot))
+                        .addGroup(FrameCalcLayout.createSequentialGroup()
+                            .addComponent(txtDivision)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtRemainder)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtSquareRoot)
+                            .addGap(18, 18, 18)
+                            .addComponent(txtCubicRoot)))
+                    .addGap(18, 18, 18)
+                    .addGroup(FrameCalcLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblAbsoluteValue, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(txtAbsolutValue, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addContainerGap(19, Short.MAX_VALUE)))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(76, 76, 76)
-                        .addComponent(lblInsertSomeValue)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtNumberInserted, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblRemainder, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSquareRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblCubicRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblAbsoluteValue, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtRemainder, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtSquareRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCubicRoot, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtAbsolutValue, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(36, Short.MAX_VALUE))
+                .addGap(76, 76, 76)
+                .addComponent(lblInsertSomeValue)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtNumberInserted, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(FrameCalc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,29 +183,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addComponent(lblInsertSomeValue, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtNumberInserted, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalculate, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblDivision)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblRemainder)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblSquareRoot)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblCubicRoot)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblAbsoluteValue))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtDivision)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtRemainder)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtSquareRoot)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtCubicRoot)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtAbsolutValue)))
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(FrameCalc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -171,17 +193,6 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void btnCalculateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalculateActionPerformed
         // TODO add your handling code here:
-        lblDivision.setVisible(true);
-        lblRemainder.setVisible(true);
-        lblSquareRoot.setVisible(true);
-        lblCubicRoot.setVisible(true);
-        lblAbsoluteValue.setVisible(true);
-        
-        txtDivision.setVisible(true);
-        txtRemainder.setVisible(true);
-        txtSquareRoot.setVisible(true);
-        txtCubicRoot.setVisible(true);
-        txtAbsolutValue.setVisible(true);
         
         int num = Integer.parseInt(txtNumberInserted.getValue().toString());
         int division = num / 2;
@@ -196,24 +207,14 @@ public class MainFrame extends javax.swing.JFrame {
         txtCubicRoot.setText(Double.toString(cubicRoot));
         txtAbsolutValue.setText(Integer.toString(absoluteValue));
         
+        FrameCalc.setVisible(true);
+        
         
         
     }//GEN-LAST:event_btnCalculateActionPerformed
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        // TODO add your handling code here:
-        lblDivision.setVisible(false);
-        lblRemainder.setVisible(false);
-        lblSquareRoot.setVisible(false);
-        lblCubicRoot.setVisible(false);
-        lblAbsoluteValue.setVisible(false);
-        
-        txtDivision.setVisible(false);
-        txtRemainder.setVisible(false);
-        txtSquareRoot.setVisible(false);
-        txtCubicRoot.setVisible(false);
-        txtAbsolutValue.setVisible(false);
-        
+        // TODO add your handling code here:      
     }//GEN-LAST:event_formWindowActivated
 
     /**
@@ -252,6 +253,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel FrameCalc;
     private javax.swing.JButton btnCalculate;
     private javax.swing.JLabel lblAbsoluteValue;
     private javax.swing.JLabel lblCubicRoot;
