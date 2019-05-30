@@ -73,7 +73,6 @@ public class ArithmeticOperators {
         System.out.println(rand);
         
         Random Rand = new Random();
-        
         System.out.println(Rand.nextInt(20));
     }
     
